@@ -5,6 +5,17 @@ Version: 0.1
 Date: 2014-03-08
 Author: Christopher Brown
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
-Depends: DBI (<= 1.0)
-Description: DBI.tools provides extensions and convenience functions that "feel" missing from the DBI package
-License: TBD 
+Depends:
+    DBI (<= 1.0),
+    RMySQL,
+    lubridate,
+    hash
+Description: DBI.tools provides extensions and convenience functions that
+    feel missing from the DBI package
+License: TBD
+Collate:
+    'dbGetQuery.R'
+    'dbReadMap.R'
+    'dbReadTables.R'
+    'dbi.tools-package.R'
+    'is.connected.R'
