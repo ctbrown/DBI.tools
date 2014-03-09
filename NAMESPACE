@@ -1,3 +1,4 @@
+export(dbClearAllResults)
 export(dbReadMap)
 export(dbReadTables)
 export(is.connected)

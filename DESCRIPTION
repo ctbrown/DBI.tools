@@ -1,6 +1,6 @@
 Package: DBI.tools
 Type: Package
-Title: Extensions and convenience function for the DBIi package
+Title: Extensions and convenience function for the DBI package
 Version: 0.1
 Date: 2014-03-08
 Author: Christopher Brown
@@ -17,5 +17,6 @@ Collate:
     'dbGetQuery.R'
     'dbReadMap.R'
     'dbReadTables.R'
-    'dbi.tools-package.R'
     'is.connected.R'
+    'dbi.tools-package.R'
+    'dbClearAllResults.R'
