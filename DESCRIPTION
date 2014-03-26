@@ -18,5 +18,6 @@ Collate:
     'dbReadMap.R'
     'dbReadTables.R'
     'is.connected.R'
-    'dbi.tools-package.R'
     'dbClearAllResults.R'
+    'DBI.tools-package.R'
+    'dbDisconnectAll.R'

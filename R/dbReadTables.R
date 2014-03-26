@@ -32,7 +32,12 @@ dbReadTables <-
       
     for( t in tables ) {      
       if( verbose ) message( "Reading ...\t", t)
-      assign( t, data.table( dbReadTable( con, t ) ), envir )
+      dat <- dbReadTable( con, t )
+      if( nrow(dat) == 0 ) {
+        message( t, " has now rows, skipping.")
+      } else { 
+        assign( t, data.table( dat ), envir )
+      }
     }
   
 }
