@@ -2,14 +2,13 @@
 #' 
 #' Closes all dbConnections
 #' 
-#' @param conn a DBI Connection
-#' @exporr
+#' @param drv a DBI driver; default MySQL()
+#' 
+#' @export
 
-dbDisconnectAll <- NULL
-# 
-# dbDisconnectAll <- function( drv ) {
-#   
-#   
-#   
-#   
-# }
+dbDisconnectAll <- function( drv=MySQL() ) {
+  
+  for( con in dbListConnections( drv ) )
+    dbDisconnect( con )
+   
+}
