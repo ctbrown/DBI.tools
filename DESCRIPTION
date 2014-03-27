@@ -13,10 +13,3 @@ Depends:
 Description: DBI.tools provides extensions and convenience functions that
     feel missing from the DBI package
 License: TBD
-Collate:
-    'dbGetQuery.R'
-    'dbReadMap.R'
-    'dbReadTables.R'
-    'is.connected.R'
-    'dbi.tools-package.R'
-    'dbClearAllResults.R'
