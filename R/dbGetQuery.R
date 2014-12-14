@@ -1,12 +1,9 @@
-
-setOldClass( "MySQLConnection" )
-
 #' dbGetQuery with data type corrections
 #' 
 #' This variant of dbGetQuery fixes data type mappings comming from the 
 #' database.  
 #' 
-#' @param conn MySQLConnection;
+#' @param conn connection
 #' @param statement character; sql statement 
 #' @param ... arguments passed to \code{dbSendQuery}
 #'
@@ -29,13 +26,14 @@ setOldClass( "MySQLConnection" )
 #'  
 #'  dbGetInfo(res) > mysqlResultInfo(res)
 #' 
-#' @aliases dbGetQuery,MySQLConnection,character-method
+# @aliases dbGetQuery,MySQLConnection,character-method
 #' @rdname dbGetQuery
 
 
 setMethod( 
   'dbGetQuery' 
-  , c( "MySQLConnection", "character" )
+  # , c( "MySQLConnection", "character" )
+  , c( "ANY", "character" )
   , function( conn, statement, ... ) { 
    
       res <- dbSendQuery( conn, statement, ... )

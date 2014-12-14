@@ -3,7 +3,7 @@
 #' Read all tables from a connections storing them as *data.tables* on 
 #' an environment
 #' 
-#' @param con MySQLConnection;
+#' @param con connection;
 #' @param envir environment; where the data is loaded (default: .GlobalEnv )
 #' @param verbose 
 #'
@@ -16,8 +16,10 @@
 #' @return Nothing. Used for reading tables only
 #' 
 #' @examples 
-#'   # con <- dbConnect( MySQL(), groups="onesheet")
-#'   # dbReadTables( con )
+#' \dontrun{
+#'   con <- dbConnect( MySQL(), groups="onesheet")
+#'   dbReadTables( con )
+#' }
 #' 
 #' @export
 
@@ -43,5 +45,3 @@ dbReadTables <-
   
 }
 
-# con <- dbConnect( MySQL(), groups="onesheet")
-# dbReadTables( con )
