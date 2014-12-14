@@ -2,11 +2,10 @@
 #' @references 
 #'   http://stackoverflow.com/questions/5090082/handling-field-types-in-database-interaction-with-r
 #' @export  
+#' @import lubridate
  
 dbReadMap <- function(con, table){
   
-    require(lubridate)
-    
     statement <- paste("DESCRIBE ",table,sep="")
     desc <- dbGetQuery(con=con,statement)[,1:2]
 

@@ -1,5 +1,6 @@
-#' DBI.tools
+#' @name DBI.tools
 #' 
+#' @description 
 #' Tools for working with the R DBI package. In many cases, these functions 
 #' exist simply for making work with DBI easier, clearer or more fun.
 #' 
@@ -7,6 +8,8 @@
 #' @name DBI.tools
 #' @aliases DBI.tools-packages
 #' @author Christopher Brown
-
+#' @import DBI
+#' @import RMySQL
 
 NULL
+

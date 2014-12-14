@@ -1,15 +1,17 @@
 Package: DBI.tools
 Type: Package
 Title: Extensions and convenience function for the DBI package
-Version: 0.2
-Date: 2014-08-26
+Description: DBI.tools provides extensions and convenience functions that
+    feel missing from the DBI package.
+Version: 0.3
+Date: 2014-12-14
 Author: Christopher Brown
 Maintainer: Christopher Brown <chris.brown@decisionpatterns.com>
 Depends:
-    DBI (<= 1.0),
+    DBI (<= 1.0)
+Import: lubridate,
     RMySQL,
-    lubridate,
     hash
-Description: DBI.tools provides extensions and convenience functions that
-    feel missing from the DBI package
 License: TBD
+Suggests:
+    testthat

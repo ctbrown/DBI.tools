@@ -1,3 +1,6 @@
+
+setOldClass( "MySQLConnection" )
+
 #' dbGetQuery with data type corrections
 #' 
 #' This variant of dbGetQuery fixes data type mappings comming from the 
@@ -28,6 +31,7 @@
 #' 
 #' @aliases dbGetQuery,MySQLConnection,character-method
 #' @rdname dbGetQuery
+
 
 setMethod( 
   'dbGetQuery' 
@@ -83,11 +87,12 @@ setMethod(
 #' 
 #' @rdname options 
 #' @name options
+#' @import hash
 
 options( mysql_type_map =
-  hash( 
-      'FIELD_TYPE_TIMESTAMP'  = ymd_hms
-    , 'FIELD_TYPE_DATETIME'   = ymd_hms
-    , 'FIELD_TYPE_DATE'       = ymd
+  hash::hash( 
+      'FIELD_TYPE_TIMESTAMP'  = lubridate::ymd_hms
+    , 'FIELD_TYPE_DATETIME'   = lubridate::ymd_hms
+    , 'FIELD_TYPE_DATE'       = lubridate::ymd
   )
 )

@@ -12,10 +12,11 @@
 #' 
 #' @export
 
-dbhead <- function( conn, tbl, n=20) { 
+dbHead <- function( conn, tbl, n=20) { 
 
   sql <- paste0( c("SELECT * FROM", tbl, "WHERE ROWNUM < ", n ), collapse=" ")
   cat( sql,"\n")
   dbGetQuery( sql )
   
 }
+

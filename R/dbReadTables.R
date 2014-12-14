@@ -24,8 +24,6 @@
 dbReadTables <- 
   function( con, envir= .GlobalEnv, verbose=TRUE ) { 
 
-    require(RMySQL)
-   
     # if( ! is.null(database) ) dbSendQuery( con, paste( "use", database ))
     
     tables <- dbGetQuery( con, "show tables")[ ,1 ]
