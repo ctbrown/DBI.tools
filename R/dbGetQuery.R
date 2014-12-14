@@ -85,12 +85,12 @@ setMethod(
 #' 
 #' @rdname options 
 #' @name options
-#' @import hash
 
 options( mysql_type_map =
-  hash::hash( 
+  list( 
       'FIELD_TYPE_TIMESTAMP'  = lubridate::ymd_hms
     , 'FIELD_TYPE_DATETIME'   = lubridate::ymd_hms
     , 'FIELD_TYPE_DATE'       = lubridate::ymd
   )
 )
+
