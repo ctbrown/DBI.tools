@@ -15,7 +15,20 @@
 #'
 #' @export 
 
-is.connected <- function(con) {
+is.connected <- function(con) UseMethod('is.connected')
+
+is.connected.OraConnection <- function(con) {
+  
+  # 23 is an arbitrary number. 
+  try(
+     { test <- dbGetQuery( con, "SELECT 23 FROM DUAL" ) }
+     , silent = TRUE
+  )
+
+   if( exists( 'test', inherits=FALSE) && test == 23 ) TRUE else FALSE
+}
+  
+is.connected.MySQLConnection <- function(con) {
 
    try(
      test_mysql_connection <- dbGetQuery( con, "SELECT TRUE;" ) 
@@ -25,3 +38,4 @@ is.connected <- function(con) {
    if( exists( 'test_mysql_connection', inherits=FALSE) ) TRUE else FALSE
 }
 
+is.connected.default <- function(con) warning("No default method available.")
