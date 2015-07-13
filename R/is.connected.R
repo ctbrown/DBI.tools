@@ -11,7 +11,8 @@
 #' 
 #' @return logical; indication of whether the simple query was successful
 #'
-#' @seealso \code{ \link[RMySQL]{isIdCurrent}}
+#' @seealso 
+#'   \code{\link[RMySQL]{isIdCurrent}} \cr
 #'
 #' @export 
 

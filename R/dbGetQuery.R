@@ -29,7 +29,6 @@
 # @aliases dbGetQuery,MySQLConnection,character-method
 #' @rdname dbGetQuery
 
-
 setMethod( 
   'dbGetQuery' 
   # , c( "MySQLConnection", "character" )

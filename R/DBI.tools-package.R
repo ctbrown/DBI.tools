@@ -11,7 +11,6 @@
 #' @aliases DBI.tools-packages
 #' @author Christopher Brown
 #' @import DBI
-#' @import RMySQL
 
 NULL
 

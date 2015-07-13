@@ -24,7 +24,7 @@
 #' @export
 
 dbReadTables <- 
-  function( con, envir= .GlobalEnv, verbose=TRUE ) { 
+  function( con, envir=.GlobalEnv, verbose=TRUE ) { 
 
     # if( ! is.null(database) ) dbSendQuery( con, paste( "use", database ))
     
