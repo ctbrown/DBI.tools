@@ -18,6 +18,7 @@
 
 is.connected <- function(con) UseMethod('is.connected')
 
+#' @export
 is.connected.OraConnection <- function(con) {
   
   # 23 is an arbitrary number. 
